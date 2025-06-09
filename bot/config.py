@@ -20,10 +20,10 @@ class Config(object):
     API_ID = int(os.environ.get("API_ID", "21567814"))
     API_HASH = os.environ.get("API_HASH", "cd7dc5431d449fd795683c550d7bfb7e")
     BOT_TOKEN = os.environ.get("BOT_TOKEN", "7734663845:AAEWTe4hMIhuLdG6RkGElp7NYubpRXbF0JY")
-    DATABASE_NAME = os.environ.get("DATABASE_NAME", "woodcraft_strangerbot")
-    DATABASE_URL = os.environ.get("DATABASE_URL", "http://t.me/herogroup35")
+    DATABASE_NAME = os.environ.get("DATABASE_NAME", "")
+    DATABASE_URL = os.environ.get("DATABASE_URL", "")
     OWNER_ID = int(os.environ.get("OWNER_ID", "6126688051"))
-    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002550528966"))
+    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", ""))
     WEB_SERVER = is_enabled(os.environ.get("WEB_SERVER", "False"), False)
     WEBHOOK = True  # Don't change this
     PORT = int(os.environ.get("PORT", 8000))
