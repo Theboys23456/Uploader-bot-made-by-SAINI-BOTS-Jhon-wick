@@ -37,31 +37,31 @@ async def set_commands(app: Client):
 
 
 async def get_admins():
-    config = await db.config.get_config("ADMINS")
+    config = await db.config.get_config("6126688051")
     return config["value"]
 
 
 async def add_admin(user_id):
-    config = await db.config.get_config("ADMINS")
+    config = await db.config.get_config("6126688051")
     if config:
         admins = config["value"]
         if user_id not in admins:
             admins.append(user_id)
-            await db.config.update_config("ADMINS", admins)
+            await db.config.update_config("6126688051", admins)
             return True
     else:
-        await db.config.add_config("ADMINS", [user_id])
+        await db.config.add_config("6126688051", [user_id])
         return True
 
     return False
 
 async def remove_admin(user_id):
-    config = await db.config.get_config("ADMINS")
+    config = await db.config.get_config("6126688051")
     if config:
         admins = config["value"]
         if user_id in admins:
             admins.remove(user_id)
-            await db.config.update_config("ADMINS", admins)
+            await db.config.update_config("6126688051", admins)
             return True
     return False
 
